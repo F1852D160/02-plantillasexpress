@@ -1,0 +1,31 @@
+<h1>
+Bienvenido,  {{nombre}}
+</h1>
+<hr/>
+
+ {{#with person}}
+    {{firstname}} {{lastname}}
+ {{/with}}
+
+<hr/>
+
+ <ul class="people_list">
+  {{#each personas}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+
+<hr/>
+
+{{#if personas}}
+  Personas esta definido.
+
+    {{log 'Esta salida se mostrará en el log' personas }}
+{{else}}
+  Personas no esta definido.
+{{/if}}
+
+
+<hr/>
+
+
